@@ -3,7 +3,7 @@ package bu.mobile.app.tour;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+//주석
 public class MainActivity extends AppCompatActivity {
 
     @Override
