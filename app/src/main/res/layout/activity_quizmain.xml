@@ -7,14 +7,31 @@
     android:orientation="vertical"
     tools:context=".QuizmainActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="10">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="천안의 이해 "
-        android:textSize="30dp"
-        android:layout_weight="10"
+        android:text="🔙"
+        android:textSize="45dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="천안탐험대 "
+        android:textSize="45dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="#00FF00"
+        android:textStyle="bold"
         />
+
+</LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -23,18 +40,20 @@
         android:textSize="45dp"
         android:gravity="center"
         android:layout_weight="20"
+        android:textStyle="bold"
         />
 
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="우리 자랑 천안의 관광지에 관련된 총 3개의 퀴즈를 맞추고 자신의 천안 인싸력을증명하세요! 분비됬으면 GO!GO!"
+        android:text="우리 자랑 천안의 관광지 3개의 퀴즈를 맞추고 자신의 천안 인싸력을증명하세요! 분비됬으면 GO!GO!"
         android:textSize="25dp"
         android:layout_weight="30"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-
+        android:textStyle="bold"
+        android:gravity="center"
         />
 
     <ImageView

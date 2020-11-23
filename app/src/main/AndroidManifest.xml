@@ -9,15 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BU_Mobile_APP_TOUR">
-        <activity android:name=".LoginActivity"></activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 퀴즈 관련 activity -->
+        </activity>
+
+        
+
+
+        <!-- 퀴즈 관련 activity -->
         <activity android:name=".QuizmainActivity" />
+        <activity android:name=".QuizthirdActivity"></activity>
+        <activity android:name=".QuizsecondActivity" />
+        <activity android:name=".QuizfirstActivity" />
+
+
     </application>
 
 </manifest>
