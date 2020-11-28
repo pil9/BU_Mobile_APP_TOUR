@@ -1,7 +1,5 @@
 package bu.mobile.app.tour;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,12 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class JoinActivity extends AppCompatActivity {
 
     private final String dbName = "tourdb";
     private final String tableName = "member";
 
-    LoginActivity.myDBHelper myHelper;
+    bu.mobile.app.tour.LoginActivity.myDBHelper myHelper;
     SQLiteDatabase sqlDB;//쿼리문 수행용
 
     EditText idText;
@@ -38,13 +38,13 @@ public class JoinActivity extends AppCompatActivity {
         idText = (EditText) findViewById(R.id.id);
         passText = (EditText) findViewById(R.id.pass);
 
-        myHelper=new LoginActivity.myDBHelper(this);
+        myHelper=new bu.mobile.app.tour.LoginActivity.myDBHelper(this);
 
     }
 
     private static final String TAG = "JoinActivity";//Log사용을 위해서 로그 태그 설정
-    public void members(View v) {
-
+    public void members(View view)
+    {
 
         sqlDB=myHelper.getReadableDatabase();
         Cursor cursor;
@@ -64,7 +64,7 @@ public class JoinActivity extends AppCompatActivity {
             cursor.close();
             /*로그인페이지로 이동 */
             Intent i1;
-            i1 = new Intent(this, JoinActivity.class);
+            i1 = new Intent(this, bu.mobile.app.tour.JoinActivity.class);
             startActivity(i1);
         }else{//중복되는 아이디가 존재 회원가입 실패
             sqlDB.close();

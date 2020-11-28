@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".JoinActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -34,11 +34,7 @@
                     android:layout_marginTop="10sp"
                     android:layout_marginLeft="25dp"
                     android:layout_weight="0"
-<<<<<<< HEAD
                     android:text="랜드마크 in"
-=======
-                    android:text="랜드마크 iq"
->>>>>>> origin/master
                     android:textColor="#000000"
                     android:textSize="50sp"
                     android:textStyle="bold" />
@@ -126,7 +122,9 @@
                 android:background="@drawable/button_background"
                 android:text="가입"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="members"
+                />
 
         </LinearLayout>
 
