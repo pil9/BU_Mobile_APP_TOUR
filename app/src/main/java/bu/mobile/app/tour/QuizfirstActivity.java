@@ -14,9 +14,9 @@ import java.util.Random;
 public class QuizfirstActivity extends AppCompatActivity {
 
     ImageView Oneimg;
-    Button Qbtn1;
-    Button Qbtn2;
-    Button Qbtn3;
+    Button Qbtn1 = (Button)findViewById(R.id.qbtn1);
+    Button Qbtn2 = (Button)findViewById(R.id.qbtn2);
+    Button Qbtn3 = (Button)findViewById(R.id.qbtn3);
     String result;
 
     Integer finalch = 0;
