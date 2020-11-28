@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".QuizfirstActivity">
-
-
+    tools:context=".QuizthirdActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,19 +32,19 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="40">
+        android:layout_weight="10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="40dp"
-            android:text="1. 해당 그림 관광지의 이름은?"
-            android:textSize="30dp"
+            android:text="결과 발표!"
+            android:textSize="40dp"
+            android:textStyle="bold"
             />
 
     </LinearLayout>
@@ -54,11 +52,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
         android:layout_weight="30">
 
         <ImageView
-            android:id="@+id/oneimg"
             android:layout_width="350dp"
             android:layout_height="300dp"
 
@@ -66,49 +64,57 @@
             android:src="@drawable/button_start1"
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_weight="8"
+                android:text="3개 중 1개 정답..!"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text=""
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="10"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center">
+
 
         <Button
-            android:id="@+id/qbtn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="유관순 기념관"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
-            android:onClick="btn1"/>
-        <Button
-            android:id="@+id/qbtn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="유관순 기념관"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
-            android:onClick="btn2"/>
-        <Button
-            android:id="@+id/qbtn3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="유관순 기념관"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
-            android:onClick="btn3"/>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="홈으로 "
+            android:textSize="30dp"/>
 
     </LinearLayout>
 
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:orientation="horizontal">
+    </LinearLayout>
 
 
 </LinearLayout>

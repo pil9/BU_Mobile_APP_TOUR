@@ -2,6 +2,7 @@ package bu.mobile.app.tour;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -15,6 +16,9 @@ public class QuizmainActivity extends AppCompatActivity {
     }
 
     public void qzstart(View v){
-        Toast.makeText(getApplicationContext(),"gogo",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"gogo",Toast.LENGTH_SHORT).show();
+        Intent i1;
+        i1 = new Intent(this, QuizfirstActivity.class);
+        startActivity(i1);
     }
 }
