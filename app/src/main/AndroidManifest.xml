@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="bu.mobile.app.tour">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,22 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BU_Mobile_APP_TOUR">
-
+        <activity android:name=".QuizresultActivity"></activity>
         <activity android:name=".MainActivity">
+
+        </activity> <!-- 퀴즈 관련 activity -->
+        <activity android:name=".QuizmainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 퀴즈 관련 activity -->
-        <activity android:name=".QuizmainActivity" />
+
+        </activity>
+
+        <activity android:name=".JoinActivity"/>
+        <activity android:name=".LoginActivity"/>
+
+
+
         <activity android:name=".QuizthirdActivity" />
         <activity android:name=".QuizsecondActivity" />
         <activity android:name=".QuizfirstActivity" />
-        <activity android:name=".CaptureAct"
-            android:screenOrientation="fullSensor"
-            android:stateNotNeeded="true"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
     </application>
 
 </manifest>
