@@ -15,21 +15,14 @@
         android:layout_weight="10">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🔙"
-            android:textSize="45dp">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="천안탐험대 "
             android:textSize="45dp"
-            android:layout_marginLeft="60dp"
+
             android:textColor="#00FF00"
             android:textStyle="bold"
+            android:gravity="center"
             />
 
     </LinearLayout>
@@ -38,7 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="40">
+        android:layout_weight="20">
 
         <TextView
             android:layout_width="match_parent"
@@ -55,12 +48,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_weight="30">
+        android:layout_weight="10">
 
         <ImageView
             android:id="@+id/oneimg"
-            android:layout_width="350dp"
-            android:layout_height="300dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
 
             android:layout_gravity="center"
             android:src="@drawable/button_start1"
@@ -82,7 +75,7 @@
             android:textSize="25dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:onClick="btn1"/>
         <Button
             android:id="@+id/qbtn2"
@@ -92,7 +85,7 @@
             android:textSize="25dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:onClick="btn2"/>
         <Button
             android:id="@+id/qbtn3"
@@ -102,7 +95,7 @@
             android:textSize="25dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:onClick="btn3"/>
 
     </LinearLayout>
