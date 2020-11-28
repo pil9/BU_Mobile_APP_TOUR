@@ -75,7 +75,11 @@
                 android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
+<<<<<<< HEAD
+                android:onClick="gojoin"/>
+=======
                 />
+>>>>>>> origin/master
 
         </LinearLayout>
 
@@ -123,7 +127,11 @@
                 android:text="로그인"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
+<<<<<<< HEAD
+                android:onClick="gomypage"/>
+=======
                 />
+>>>>>>> origin/master
 
 
 
