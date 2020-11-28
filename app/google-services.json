@@ -8,38 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896057334844:android:537bfaa93b7fecd2b4b739",
-        "android_client_info": {
-          "package_name": "bu.mobile.app.tour"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "896057334844-mrioaldeccpjn59b0c5v9easgng2pon9.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBWPWBnHG0F11ssrBOgxH9KmdFd5P3STjc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "896057334844-mrioaldeccpjn59b0c5v9easgng2pon9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:896057334844:android:06b6b1612b69d904b4b739",
         "android_client_info": {
-          "package_name": "com.example.cheonan"
+          "package_name": "bu.mobile.app.tour"
         }
       },
       "oauth_client": [

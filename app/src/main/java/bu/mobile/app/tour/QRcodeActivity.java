@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class QRcodeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button scanBtn;
 

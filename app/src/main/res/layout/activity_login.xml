@@ -75,9 +75,8 @@
                 android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                />
-
-        </LinearLayout>
+                android:onClick="gojoin"/>
+</LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -123,11 +122,8 @@
                 android:text="로그인"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                />
-
-
-
-        </LinearLayout>
+                android:onClick="gomypage"/>
+</LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
