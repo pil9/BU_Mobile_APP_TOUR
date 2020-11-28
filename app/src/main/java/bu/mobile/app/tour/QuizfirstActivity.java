@@ -35,24 +35,22 @@ public class QuizfirstActivity extends AppCompatActivity {
 
 
         if(type == 1){
-            result ="각원사";
+            result ="p1";
 
             Oneimg = (ImageView) findViewById(R.id.oneimg);
-            Oneimg.setImageResource(R.drawable.각원사);
-
-
+            Oneimg.setImageResource(R.drawable.p1);
 
         }else if(type == 2){
-            result ="독립기념관";
+            result ="p2";
 
             Oneimg = (ImageView) findViewById(R.id.oneimg);
-            Oneimg.setImageResource(R.drawable.각원사);
+            Oneimg.setImageResource(R.drawable.p2);
 
         }else if(type == 3){
-            result ="아리리오갤러리";
+            result ="p3";
 
             Oneimg = (ImageView) findViewById(R.id.oneimg);
-            Oneimg.setImageResource(R.drawable.각원사);
+            Oneimg.setImageResource(R.drawable.p3);
 
         }
 
