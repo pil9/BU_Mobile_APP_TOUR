@@ -42,7 +42,7 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:textSize="15sp"
-                android:text="비올확률:70%"/>
+                android:text="비올확률:60%"/>
 
         </LinearLayout>
         <LinearLayout
