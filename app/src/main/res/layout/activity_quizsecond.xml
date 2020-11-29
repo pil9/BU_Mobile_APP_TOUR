@@ -13,21 +13,14 @@
         android:layout_weight="10">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🔙"
-            android:textSize="45dp">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="천안탐험대 "
             android:textSize="45dp"
-            android:layout_marginLeft="60dp"
+
             android:textColor="#00FF00"
             android:textStyle="bold"
+            android:gravity="center"
             />
 
     </LinearLayout>
@@ -57,6 +50,7 @@
         android:layout_weight="30">
 
         <ImageView
+            android:id="@+id/twoimg"
             android:layout_width="350dp"
             android:layout_height="300dp"
 
@@ -65,6 +59,7 @@
             />
 
         <TextView
+            android:id="@+id/chtext"
             android:layout_width="350dp"
             android:layout_height="35dp"
             android:text="ㄱ ㅇ ㅅ"
@@ -81,6 +76,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/usertext"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="8"
@@ -93,7 +89,8 @@
             android:layout_weight="1"
             android:text="입력"
             android:textSize="30dp"
-            android:layout_marginRight="40dp"/>
+            android:layout_marginRight="40dp"
+            android:onClick="twobtn"/>
 
     </LinearLayout>
 
