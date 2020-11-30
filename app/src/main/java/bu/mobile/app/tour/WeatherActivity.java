@@ -31,7 +31,7 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        testText = (TextView)findViewById(R.id.weather_text);
+        testText = (TextView)findViewById(R.id.location);
         sendData(); // 웹 서버로 데이터 전송
 
         Button button = (Button)findViewById(R.id.weather);
@@ -53,7 +53,7 @@ public class WeatherActivity extends AppCompatActivity {
 //    };
     /** 웹 서버로 데이터 전송 */
     public void sendData() {
-// 네트워크 통신하는 작업은 무조건 작업스레드를 생성해서 호출 해줄 것!!
+// 네트워크 통신하는 작업은 무조건 작업스레드를 생성해서 호출 해줄 것
         new Thread() {
             public void run() {
                 httpConn.requestWebServer(callback);
@@ -100,6 +100,10 @@ public class WeatherActivity extends AppCompatActivity {
 ////                String address = jObject.getString("address");
 //                name = jObject.getString("name");
 ////                int age = jObject.getInt("age");
+//            Log.d(TAG, "왜 안나와"+location);
+            if(location.equals("Cheonan")){
+                location = "천안시";
+            }
             testText.setText(location);
 //            Toast.makeText(getBaseContext(),"동동",Toast.LENGTH_SHORT).show();
 //            tv.setText(sb.toString());
