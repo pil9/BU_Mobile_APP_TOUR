@@ -35,8 +35,8 @@ public class JoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        idText = (EditText) findViewById(R.id.id);
-        passText = (EditText) findViewById(R.id.pass);
+        idText = (EditText) findViewById(R.id.idText);
+        passText = (EditText) findViewById(R.id.editTextTextPassword);
 
         myHelper=new bu.mobile.app.tour.LoginActivity.myDBHelper(this);
 
@@ -64,7 +64,7 @@ public class JoinActivity extends AppCompatActivity {
             cursor.close();
             /*로그인페이지로 이동 */
             Intent i1;
-            i1 = new Intent(this, bu.mobile.app.tour.JoinActivity.class);
+            i1 = new Intent(this, bu.mobile.app.tour.LoginActivity.class);
             startActivity(i1);
         }else{//중복되는 아이디가 존재 회원가입 실패
             sqlDB.close();
