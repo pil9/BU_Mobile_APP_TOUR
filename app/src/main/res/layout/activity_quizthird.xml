@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="천안탐험대 "
+            android:text="Quiz 3"
             android:textSize="45dp"
 
             android:textColor="#00FF00"

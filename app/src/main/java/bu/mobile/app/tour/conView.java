@@ -14,14 +14,14 @@ public class conView extends LinearLayout {
         super(context);
         inflatetion_init(context);
 
-        fruitTextView = (TextView)findViewById(R.id.tv_name);
-        priceTextView = (TextView)findViewById(R.id.tv_address);
+        fruitTextView = (TextView)findViewById(R.id.c_name);
+        priceTextView = (TextView)findViewById(R.id.c_address);
 
     }
 
     private void inflatetion_init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.list_item,this,true);
+        inflater.inflate(R.layout.conitem,this,true);
     }
 
     public void setFruit(String fruit){

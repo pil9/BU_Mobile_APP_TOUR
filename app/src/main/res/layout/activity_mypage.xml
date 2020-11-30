@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
+        android:layout_weight="3"
         >
 
         <TextView
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="천안탐험대 "
+            android:text="MYPAGE"
             android:textSize="45dp"
             android:layout_marginLeft="60dp"
             android:textColor="#00FF00"
@@ -48,7 +48,8 @@
             android:text="ID : 아무개 "
             android:textSize="40dp"
             android:gravity="center"
-            android:layout_weight="10"/>
+            android:layout_weight="10"
+            android:textStyle="bold"/>
 
 
 
@@ -68,7 +69,8 @@
             android:text=" QR스캔 횟수 : 0"
             android:textSize="30dp"
             android:gravity="left"
-            android:layout_weight="10"/>
+            android:layout_weight="10"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -76,7 +78,8 @@
             android:text=" 보유 쿠폰 수  : 0"
             android:textSize="30dp"
             android:gravity="left"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -84,7 +87,8 @@
             android:text=" 방문 관관 수  : 0"
             android:textSize="30dp"
             android:gravity="left"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:textStyle="bold"/>
 
 
 
@@ -100,17 +104,13 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:fillViewport="true">
+
 
             <ListView
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_height="400dp"
                 android:id="@+id/conlist"/>
 
             <!--<LinearLayout
@@ -149,7 +149,6 @@
             </LinearLayout>-->
 
 
-        </LinearLayout>
 
 
         </ScrollView>
