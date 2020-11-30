@@ -9,26 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".QuizresultActivity"></activity>
-        <activity android:name=".MainActivity">
-        </activity> <!-- 퀴즈 관련 activity -->
-        <activity android:name=".QuizmainActivity"></activity>
-
-        <activity android:name=".LoginActivity">
-
+        <activity android:name=".WeatherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
+        <activity android:name=".QuizresultActivity" />
+        <activity android:name=".MainActivity"></activity> <!-- 퀴즈 관련 activity -->
+        <activity android:name=".QuizmainActivity" />
+        <activity android:name=".LoginActivity">
 
-        <activity android:name=".MypageActivity"/>
-        <activity android:name=".JoinActivity"/>
-
-
-
-
+        </activity>
+        <activity android:name=".MypageActivity" />
+        <activity android:name=".JoinActivity" />
         <activity android:name=".QuizthirdActivity" />
         <activity android:name=".QuizsecondActivity" />
         <activity android:name=".QuizfirstActivity" />
