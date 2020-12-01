@@ -23,7 +23,7 @@ public class HttpConnection {
 //                .add("parameter2", parameter2)
                 .build();
         Request request = new Request.Builder()
-                .url("http://api.openweathermap.org/data/2.5/weather?q=cheonan&appid=370c6108b91660deca1c2d5125c466bc")
+                .url("http://api.openweathermap.org/data/2.5/weather?q=cheonan&appid=370c6108b91660deca1c2d5125c466bc&units=metric")
                 .post(body)
                 .build();
         client.newCall(request).enqueue(callback);

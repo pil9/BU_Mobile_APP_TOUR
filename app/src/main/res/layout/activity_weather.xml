@@ -6,11 +6,21 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity"
     >
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="오늘의 천안 날씨"
+        android:fontFamily="@font/wandohope"
+        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
         <ImageView
+            android:id="@+id/weatherimg"
             android:layout_width="150dp"
             android:layout_height="140dp"
             android:src="@drawable/rain"
@@ -29,23 +39,29 @@
                 android:gravity="left"
                 android:textSize="30sp"
                 android:layout_marginTop="30dp"
+                android:textStyle="bold"
                 android:text="인천시"
+                android:fontFamily="@font/wandohope"
 
+                />
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textSize="23sp"
+                android:text="비옴"
+                android:fontFamily="@font/wandohope"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="left"
-                android:textSize="23sp"
-                android:text="비옴"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="left"
                 android:textSize="15sp"
-                android:text="비올확률:60%"/>
+                android:fontFamily="@font/wandohope"
+                android:text="비올확률:20%"/>
 
         </LinearLayout>
         <LinearLayout
@@ -54,10 +70,13 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/temp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="40sp"
+                android:fontFamily="@font/wandohope"
+                android:textStyle="bold"
                 android:text="26°C" />
         </LinearLayout>
     </LinearLayout>
@@ -67,7 +86,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/weather"/>
+            android:id="@+id/weather1"/>
         <TextView
             android:id="@+id/weather_text"
             android:layout_width="wrap_content"
