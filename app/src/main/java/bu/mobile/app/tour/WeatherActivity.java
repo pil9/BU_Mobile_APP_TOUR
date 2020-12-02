@@ -1,7 +1,7 @@
 package bu.mobile.app.tour;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.widget.Toolbar;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.nfc.Tag;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -43,22 +44,42 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.myAppName);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText("오늘의 천안 날씨");
         location_now = (TextView) findViewById(R.id.location);
         weather_now = (TextView) findViewById(R.id.weather);
         temp_now = (TextView) findViewById(R.id.temp);
         imageView = findViewById(R.id.weatherimg);
         sendData(); // 웹 서버로 데이터 전송
 
-        Button button = (Button) findViewById(R.id.weather1);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getBaseContext(), "동동", Toast.LENGTH_SHORT).show();
-                sendData();
-
-            }
-        });
+//        Button button = (Button) findViewById(R.id.weather1);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getBaseContext(), "동동", Toast.LENGTH_SHORT).show();
+//                sendData();
+//
+//            }
+//        });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                onBackPressed();
+//                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
     public void getWeatherImg(String imgid) {
         new Thread() {
             public void run() {
