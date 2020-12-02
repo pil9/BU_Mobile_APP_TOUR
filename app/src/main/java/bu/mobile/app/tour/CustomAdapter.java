@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -116,7 +117,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                     TextView tvtxt = (TextView)dialog.findViewById(R.id.tvtxt);
                     tvtxt.setText(arrayList.get(position).getTxt());
 
-                    Button exitBtn = dialog.findViewById(R.id.exitBtn);
+                    ImageButton exitBtn = dialog.findViewById(R.id.exitBtn);
                     exitBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
