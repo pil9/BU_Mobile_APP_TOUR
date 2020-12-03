@@ -38,6 +38,8 @@
             android:text="결과 발표!"
             android:textSize="40dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
             />
 
     </LinearLayout>
@@ -73,7 +75,9 @@
                 android:text="3개 중 1개 정답..!"
                 android:textSize="30dp"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/wandohope"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,8 +103,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="홈으로 "
-            android:textSize="30dp"/>
+            android:text="홈으로"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"
+            android:padding="10dp"/>
 
     </LinearLayout>
 

@@ -21,6 +21,7 @@
             android:textColor="#00FF00"
             android:textStyle="bold"
             android:gravity="center"
+
             />
 
     </LinearLayout>
@@ -38,6 +39,8 @@
             android:text="3. OX퀴즈 "
             android:textSize="40dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
             />
 
     </LinearLayout>
@@ -72,7 +75,9 @@
             android:text="해당 사진의 관광지는 "
             android:textSize="30dp"
             android:gravity="center"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"/>
 
             <TextView
                 android:id="@+id/tourname"
@@ -82,7 +87,9 @@
                 android:text="성불사 이다. "
                 android:textSize="30dp"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/wandohope"/>
 
         </LinearLayout>
 
@@ -102,7 +109,10 @@
             android:text="O"
             android:textSize="30dp"
             android:layout_marginRight="60dp"
-            android:onClick="okokbtn"/>
+            android:onClick="okokbtn"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"/>
 
         <Button
             android:id="@+id/nonobtn"
@@ -110,7 +120,10 @@
             android:layout_height="match_parent"
             android:text="X"
             android:textSize="30dp"
-            android:onClick="nobtn"/>
+            android:onClick="nobtn"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"/>
 
     </LinearLayout>
 

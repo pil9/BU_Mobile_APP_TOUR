@@ -73,7 +73,9 @@ public class MypageActivity extends AppCompatActivity {
                     Toast.makeText(context, title + ": 오늘의 추천 관광지 확인합니다.", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.quizlistgo){
-                    Toast.makeText(context, title + ": 퀴즈 이벤트를 확인합니다.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, title + ": 퀴즈 이벤트를 확인합니다.", Toast.LENGTH_SHORT).show();
+                    Intent main = new Intent(getApplicationContext(), QuizmainActivity.class);
+                    startActivity(main);
                 }
                 else if(id == R.id.QRgo){
                     Toast.makeText(context, title + ": QR 목록 ㄱ", Toast.LENGTH_SHORT).show();
