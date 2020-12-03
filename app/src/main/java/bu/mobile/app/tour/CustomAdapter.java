@@ -6,6 +6,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.provider.ContactsContract;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
@@ -101,6 +103,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                         listener.onItemClick(CustomViewHolder.this,v,position);
                     }
                     Dialog dialog = new Dialog(context);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     dialog.setContentView(R.layout.detaillist);
 
                     TextView tvname = (TextView)dialog.findViewById(R.id.tvname);
