@@ -13,7 +13,6 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:onClick="onButtonClicked"
-        android:src="@drawable/exit"
         android:textSize="10sp" />
 
     <ScrollView
