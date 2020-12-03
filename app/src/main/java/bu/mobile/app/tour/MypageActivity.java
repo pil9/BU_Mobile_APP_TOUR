@@ -66,8 +66,8 @@ public class MypageActivity extends AppCompatActivity {
 
                 if(id == R.id.marckgo){
                     Toast.makeText(context, title + ": 천안 랜드마크를 확인합니다.", Toast.LENGTH_SHORT).show();
-                    Intent main = new Intent(this, MainActivity.class);
-                    startActivity(main);
+                   /* Intent main = new Intent(this, MainActivity.class);
+                    startActivity(main);*/
                 }
                 else if(id == R.id.Tourists){
                     Toast.makeText(context, title + ": 오늘의 추천 관광지 확인합니다.", Toast.LENGTH_SHORT).show();
