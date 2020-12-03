@@ -7,6 +7,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -21,12 +23,23 @@ import android.content.Context;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
+import static bu.mobile.app.tour.LoginActivity.useridx;
+
 public class MypageActivity extends AppCompatActivity {
 
+    LoginActivity.myDBHelper myHelper;
+    SQLiteDatabase sqlDB2;
+
+    TextView totalSam;
+    TextView userName;
     ListView listView;
     myAdapters adapter;
-    String[] fruits = {"자몽", "포도","사과","배"};
-    String[] price = {"200", "300","400","500"};
+   // String[] fruits = {"자몽", "포도","사과","배"};
+    ArrayList<String> fruits = new ArrayList<>();
+    //String[] price = {"200", "300","400","500"};
+    ArrayList<String> price = new ArrayList<>();
 
     private DrawerLayout mDrawerLayout;
     private Context context = this;
@@ -36,13 +49,14 @@ public class MypageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
-
+        totalSam = (TextView) findViewById(R.id.totalsam);
+        userName = (TextView) findViewById(R.id.username);
         listView = (ListView) findViewById(R.id.conlist);
 
         adapter = new myAdapters();
         listView.setAdapter(adapter);
 
-
+        myHelper=new LoginActivity.myDBHelper(this);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -93,8 +107,41 @@ public class MypageActivity extends AppCompatActivity {
         });
 
 
+        int num = 0 ;
+        sqlDB2=myHelper.getReadableDatabase();
+        Cursor cursor;
+        cursor=sqlDB2.rawQuery("SELECT * FROM member;",null);//select문 실행
+        String strNames="title"+"\r\n"+"-----------------------"+"\r\n";
+        String strNumbers="context"+"\r\n"+"------------------------"+"\r\n";
+        String strNumbers2="img"+"\r\n"+"------------------------"+"\r\n";
+        while (cursor.moveToNext()){//다음 레코드가 있을동안 수행
 
+            strNames+=cursor.getString(0)+"\r\n";
+            strNumbers+=cursor.getString(1)+"\r\n";
+            strNumbers2+=cursor.getString(2)+"\r\n";
+            fruits.add(cursor.getString(0));
+            price.add(cursor.getString(0));
+            //fruits[num] = cursor.getString(0);
+            //price[num] = cursor.getString(1);
+            num++;
 
+        }
+        totalSam.setText("보유 스탬프 : "+num);
+        Toast.makeText(getApplicationContext(),"로그확인.one: "+strNames+" two:"+strNumbers+" tree: "+strNumbers2+"",Toast.LENGTH_LONG).show();
+        cursor.close();
+        sqlDB2.close();
+
+        useridx = 1;//로그인 페이지와 연동 후 확인 필요 임시값 입력함
+        sqlDB2=myHelper.getReadableDatabase();
+        Cursor cursor2;
+        cursor2=sqlDB2.rawQuery("SELECT * FROM member WHERE midx='"+useridx+"' ;",null);//select문 실행
+        cursor2.moveToFirst();
+        String id;
+        id = cursor2.getString(1);
+        userName.setText("ID : "+id);
+        //Toast.makeText(getApplicationContext(),"로그확인.one: "+strNames+" two:"+strNumbers+" tree: "+strNumbers2+"",Toast.LENGTH_LONG).show();
+        cursor2.close();
+        sqlDB2.close();
 
 
 
@@ -110,12 +157,12 @@ public class MypageActivity extends AppCompatActivity {
     class myAdapters extends BaseAdapter{
         @Override
         public int getCount() {
-            return fruits.length;
+            return fruits.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return fruits[position];
+            return fruits.get(position);
         }
 
         @Override
@@ -129,8 +176,8 @@ public class MypageActivity extends AppCompatActivity {
 
             //TextView view = new TextView(getApplicationContext());
             //view.setText(fruits[position]);
-            view.setFruit(fruits[position]);
-            view.setPrice(price[position]);
+            view.setFruit(fruits.get(position));
+            view.setPrice(price.get(position));
             //view.setTextSize(50.0f);
             //view.setTextColor(Color.BLUE);
             return view;
@@ -147,6 +194,10 @@ public class MypageActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 
 
 
