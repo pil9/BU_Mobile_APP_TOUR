@@ -10,13 +10,14 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/iv_image"
+            android:id="@+id/stamp1"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_qr"
-            android:background="#000000"
+            android:src="@drawable/stamp1"
+
             />
+
 
         <LinearLayout
             android:layout_width="match_parent"

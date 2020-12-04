@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_board"
         android:name="bu.mobile.app.tour.MainActivity"
-        android:label="Home"
+        android:label="천안의 랜드마크"
         tools:layout="@layout/activity_main" />
 
     <fragment
@@ -20,13 +20,13 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="bu.mobile.app.tour.MypageActivity"
-        android:label="Addremote"
+        android:label="마이페이지"
         tools:layout="@layout/activity_mypage" />
 
     <fragment
         android:id="@+id/nav_quiz"
         android:name="bu.mobile.app.tour.QuizmainActivity"
-        android:label="Explain"
+        android:label="퀴즈풀이"
         tools:layout="@layout/activity_quizmain" />
     <activity
         android:id="@+id/nav_active"

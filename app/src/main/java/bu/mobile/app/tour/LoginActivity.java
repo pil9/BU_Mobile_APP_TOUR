@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.d(TAG,"아이디 없다 ");
             cursor.close();
             sqlDB.close();
-            Toast.makeText(getApplicationContext(),"등록되지 않음 정보입니다 .",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"등록되지 않은 정보입니다",Toast.LENGTH_LONG).show();
         }
         else{//getCount가 0이 아니면 일치하는 정보있음 로그인 성공
             cursor.moveToFirst();
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.d(TAG,"로그인 유저 인덱스값: "+useridx);
             cursor.close();
             sqlDB.close();
-            Toast.makeText(getApplicationContext(),"로그인 성공 .",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),Id.getText().toString()+"님 환영합니다!",Toast.LENGTH_LONG).show();
 
             /*마이페이지로 화면이동*/
             Intent i1;

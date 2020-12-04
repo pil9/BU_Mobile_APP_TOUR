@@ -13,7 +13,7 @@ import android.view.View;
 
 
 public class SmoothBackgroundView extends View {
-    private final static int FPS = 40;
+    private final static int FPS = 33;
     private Bitmap mBitmap;
     private Rect mRect;
     private int mPosition;
@@ -22,9 +22,6 @@ public class SmoothBackgroundView extends View {
     private boolean isMovingLeft;
     private Handler mHandler;
 
-    public SmoothBackgroundView(Context context) {
-        this(context, null);
-    }
 
     public SmoothBackgroundView(Context context, AttributeSet attrs) {
         super(context, attrs);
