@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static bu.mobile.app.tour.MypageActivity.fruits;
+import static bu.mobile.app.tour.MypageActivity.price;
+
 public class JoinActivity extends AppCompatActivity {
 
     private final String dbName = "tourdb";
@@ -39,6 +42,18 @@ public class JoinActivity extends AppCompatActivity {
         passText = (EditText) findViewById(R.id.editTextTextPassword);
 
         myHelper=new bu.mobile.app.tour.LoginActivity.myDBHelper(this);
+
+        fruits.add("각원사 스탬프");
+        fruits.add("아라리오갤러리 스탬프");
+        fruits.add("독립기념관 스탬프");
+        fruits.add("유관순 사열지 스탬프");
+        fruits.add("보탑사 스탬프");
+
+        price.add("가맹점 20% 할인");
+        price.add("티켓 10% 할인");
+        price.add("500원 기프트콘");
+        price.add("전통시장 5% 할인");
+        price.add("적립 +10%");
 
     }
 
