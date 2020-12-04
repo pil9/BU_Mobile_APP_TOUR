@@ -79,7 +79,12 @@ public class WeatherActivity extends Fragment {
         sendData();
         return v;
     }
-
+//    public static WeatherActivity newInstance(){
+//        WeatherActivity fragment = new WeatherActivity();
+//        Bundle args =  new Bundle();
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
     public void getWeatherImg(String imgid) {
         new Thread() {
             public void run() {

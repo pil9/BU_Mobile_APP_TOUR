@@ -28,6 +28,11 @@
         android:name="bu.mobile.app.tour.QuizmainActivity"
         android:label="Explain"
         tools:layout="@layout/activity_quizmain" />
+    <activity
+        android:id="@+id/nav_active"
+        android:name="bu.mobile.app.tour.QRcodeActivity"
+        tools:layout="@layout/activity_q_rcode"
+        />
 
     <!--
     <fragment

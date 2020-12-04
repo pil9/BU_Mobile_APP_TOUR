@@ -17,18 +17,25 @@
 
         </activity>
         <activity android:name=".LoginActivity">
-
-        </activity>
-        <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity2">
+
+        </activity>
         <activity android:name=".MypageActivity" >
 
         </activity>
+        <activity android:name=".QRcodeActivity" >
+
+
+        </activity>
+        <activity android:name=".StampActivity" />
+        <activity android:name=".StampSecondActivity" />
+        <activity android:name=".CaptureAct" />
         <activity android:name=".JoinActivity" />
         <activity android:name=".QuizthirdActivity" />
         <activity android:name=".QuizsecondActivity" />

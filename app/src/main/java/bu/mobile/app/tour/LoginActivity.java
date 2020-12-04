@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
             /*마이페이지로 화면이동*/
             Intent i1;
-            i1 = new Intent(this, MypageActivity.class);
+            i1 = new Intent(this, MainActivity2.class);
             startActivity(i1);
 
         }
