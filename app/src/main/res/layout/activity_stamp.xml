@@ -5,18 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    >
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/botapsa"
+        android:background="@drawable/round_border"
+        />
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보탑사 스탬프 획득!"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:fontFamily="@font/wandohope"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:padding="3dp"
+        android:text="(12월5일까지) 기념품관 20% 할인 쿠폰"
+        android:background="@drawable/round_border"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/wandohope"
+        />
 
     <Button
         android:id="@+id/button"
         android:layout_width="200dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="쿠폰 저장"
+        android:text="쿠폰으로 저장"
         android:fontFamily="@font/wandohope"
+        android:layout_gravity="center"
         android:textSize="24sp"
         android:background="@drawable/button"
         android:textColor="#FFFFFF"/>
