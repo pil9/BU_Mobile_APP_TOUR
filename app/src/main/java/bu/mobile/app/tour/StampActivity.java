@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
+import static bu.mobile.app.tour.MypageActivity.fruits;
+import static bu.mobile.app.tour.MypageActivity.price;
+
 public class StampActivity extends AppCompatActivity {
     ImageView imageView;
     Button button;
@@ -25,6 +28,9 @@ public class StampActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fruits.addFirst("테스트 스탬프");
+                price.addFirst("전품목 5% 할인");
+
                 finish();
 
 //                ByteArrayOutputStream stream = new ByteArrayOutputStream();

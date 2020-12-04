@@ -26,6 +26,9 @@ import android.content.Context;
 import android.util.Log;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.LinkedList;
+
 import static bu.mobile.app.tour.LoginActivity.useridx;
 
 public class MypageActivity extends Fragment {
@@ -38,8 +41,11 @@ public class MypageActivity extends Fragment {
 
     ListView listView;
     myAdapters adapter;
-    String[] fruits = {"각원사 스탬프", "아라리오갤러리 스탬프","독립기념관 스탬프","유관순 사열지 스탬프", "보탑사 스탬프"};
-    String[] price = {"가맹점 20% 할인", "티켓 10% 할인","500원 기프트콘","전통시장 5% 할인", "적립 +10%"};
+    //static String[] fruits = {"각원사 스탬프", "아라리오갤러리 스탬프","독립기념관 스탬프","유관순 사열지 스탬프", "보탑사 스탬프"};
+    //static String[] price = {"가맹점 20% 할인", "티켓 10% 할인","500원 기프트콘","전통시장 5% 할인", "적립 +10%"};
+    static LinkedList<String> fruits = new LinkedList();
+    static LinkedList<String> price = new LinkedList();
+
 
 
     @Override
@@ -51,6 +57,18 @@ public class MypageActivity extends Fragment {
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fruits.add("각원사 스탬프");
+        fruits.add("아라리오갤러리 스탬프");
+        fruits.add("독립기념관 스탬프");
+        fruits.add("유관순 사열지 스탬프");
+        fruits.add("보탑사 스탬프");
+
+        price.add("가맹점 20% 할인");
+        price.add("티켓 10% 할인");
+        price.add("500원 기프트콘");
+        price.add("전통시장 5% 할인");
+        price.add("적립 +10%");
+
         View v = inflater.inflate(R.layout.activity_mypage, container, false);
         listView = (ListView) v.findViewById(R.id.conlist);
         adapter = new myAdapters();
@@ -84,12 +102,12 @@ public class MypageActivity extends Fragment {
     class myAdapters extends BaseAdapter{
         @Override
         public int getCount() {
-            return fruits.length;
+            return fruits.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return fruits[position];
+            return fruits.get(position);
         }
 
         @Override
@@ -103,8 +121,8 @@ public class MypageActivity extends Fragment {
 
             //TextView view = new TextView(getApplicationContext());
             //view.setText(fruits[position]);
-            view.setFruit(fruits[position]);
-            view.setPrice(price[position]);
+            view.setFruit(fruits.get(position));
+            view.setPrice(price.get(position));
             //view.setTextSize(50.0f);
             //view.setTextColor(Color.BLUE);
             return view;
