@@ -1,6 +1,8 @@
 package bu.mobile.app.tour;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +20,7 @@ public class QuizresultActivity extends AppCompatActivity {
     ImageView resultimg;
     int nowagree;
     int[] check;
-
+    MypageActivity fragment1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +46,23 @@ public class QuizresultActivity extends AppCompatActivity {
         Log.d("배열확인: ", Arrays.toString(check));
         Log.d("답 갯: ", "value"+nowagree);
 
+        Button button1 = (Button) findViewById(R.id.gomys) ;
+        button1.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(myIntent);
+
+
+            }
+        });
+
     }
 
-    public void gohome(View v){
+  /*  public void gohomes(View v){
         Intent myIntent = new Intent(this, MypageActivity.class);
         startActivity(myIntent);
-    }
+    }*/
 
 
 }
