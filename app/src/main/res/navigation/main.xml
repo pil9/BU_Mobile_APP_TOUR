@@ -22,13 +22,6 @@
         android:name="bu.mobile.app.tour.MypageActivity"
         android:label="Addremote"
         tools:layout="@layout/activity_mypage" />
-
-    <fragment
-        android:id="@+id/nav_quiz"
-        android:name="bu.mobile.app.tour.QuizmainActivity"
-        android:label="관광지 퀴즈퀴즈"
-        tools:layout="@layout/activity_quizmain" />
-
     <!--
     <fragment
         android:id="@+id/nav_explain"
