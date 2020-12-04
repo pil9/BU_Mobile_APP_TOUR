@@ -13,6 +13,7 @@ import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -104,6 +105,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                     }
                     Dialog dialog = new Dialog(context);
                     dialog.setContentView(R.layout.detaillist);
+                    WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+                    params.width = WindowManager.LayoutParams.MATCH_PARENT;
+                    params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                    dialog.getWindow().setAttributes((WindowManager.LayoutParams)params);
 
                     TextView tvname = (TextView)dialog.findViewById(R.id.tvname);
                     tvname.setText(arrayList.get(position).getName());
