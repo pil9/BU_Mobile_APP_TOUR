@@ -57,17 +57,21 @@ public class MypageActivity extends Fragment {
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        fruits.add("각원사 스탬프");
-        fruits.add("아라리오갤러리 스탬프");
-        fruits.add("독립기념관 스탬프");
-        fruits.add("유관순 사열지 스탬프");
-        fruits.add("보탑사 스탬프");
 
-        price.add("가맹점 20% 할인");
-        price.add("티켓 10% 할인");
-        price.add("500원 기프트콘");
-        price.add("전통시장 5% 할인");
-        price.add("적립 +10%");
+        if(fruits.size() <= 0){
+            fruits.add("각원사 스탬프");
+            fruits.add("아라리오갤러리 스탬프");
+            fruits.add("독립기념관 스탬프");
+            fruits.add("유관순 사열지 스탬프");
+            fruits.add("보탑사 스탬프");
+
+            price.add("가맹점 20% 할인");
+            price.add("티켓 10% 할인");
+            price.add("500원 기프트콘");
+            price.add("전통시장 5% 할인");
+            price.add("적립 +10%");
+        }
+
 
         View v = inflater.inflate(R.layout.activity_mypage, container, false);
         listView = (ListView) v.findViewById(R.id.conlist);
