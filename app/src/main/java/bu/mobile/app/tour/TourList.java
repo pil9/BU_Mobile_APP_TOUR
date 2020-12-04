@@ -1,6 +1,8 @@
 package bu.mobile.app.tour;
 
-public class TourList {private String image;
+public class TourList {
+    public boolean isSelected;
+    private String image;
     private String image2;
     private String name;
     private String address;
@@ -49,5 +51,7 @@ public class TourList {private String image;
         this.txt = txt;
     }
 
+    public void setSelected(boolean isChecked) {
+    }
 }
 
