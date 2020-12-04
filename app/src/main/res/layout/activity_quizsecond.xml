@@ -95,7 +95,7 @@
             android:textSize="30dp"
             android:layout_marginRight="40dp"
             android:onClick="twobtn"
-            android:textColor="@color/black"
+
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"/>
 

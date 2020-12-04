@@ -79,7 +79,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:onClick="btn1"
-            android:textColor="@color/black"
+
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"/>
         <Button
@@ -92,7 +92,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:onClick="btn2"
-            android:textColor="@color/black"
+
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"/>
         <Button
@@ -105,7 +105,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:onClick="btn3"
-            android:textColor="@color/black"
+
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"/>
 

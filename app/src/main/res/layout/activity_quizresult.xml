@@ -105,7 +105,7 @@
             android:layout_height="match_parent"
             android:text="홈으로"
             android:textSize="30dp"
-            android:textColor="@color/black"
+
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"
             android:padding="10dp"/>
