@@ -8,6 +8,7 @@ public class TourList {private String image;
 
     public TourList(){}
 
+
     public String getImage() {
         return image;
     }
