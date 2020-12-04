@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".QRcodeActivity">
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="랜드마크 in 천안"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/round_border"
         android:textColor="#000000"
         android:fontFamily="@font/wandohope"
         android:layout_centerHorizontal="true"
@@ -18,22 +22,37 @@
         android:textSize="40sp" />
 
     <ImageView
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="240dp"
-        android:src="@drawable/ic_qr"
+        android:src="@drawable/map_qr"
         android:layout_centerHorizontal="true"
-        android:layout_margin="100dp"
-        app:tint="@color/black" />
+        android:layout_margin="10dp"
+        android:background="@drawable/round_border"
+        android:layout_gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="관광지의 숨겨진 QR코드를 인증해주세요!"
+        android:fontFamily="@font/wandohope"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
 
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:id="@+id/scanBtn"
         android:layout_centerInParent="true"
-        android:text="QR코드를 인식해주세요!"
+        android:text="QR코드 촬영 시작!"
+        android:textStyle="bold"
+        android:fontFamily="@font/wandohope"
         android:textSize="24sp"
         android:background="@drawable/button"
+        android:layout_marginTop="30dp"
         android:textColor="#FFFFFF" />
 
 
-</RelativeLayout>
+</LinearLayout>

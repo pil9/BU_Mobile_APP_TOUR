@@ -9,17 +9,14 @@
     tools:context=".MainActivity">
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageview"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:src="@drawable/stamp_white"/>-->
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="스탬프 저장"
+        android:text="쿠폰 저장"
+        android:fontFamily="@font/wandohope"
         android:textSize="24sp"
         android:background="@drawable/button"
         android:textColor="#FFFFFF"/>

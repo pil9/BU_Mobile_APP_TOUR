@@ -25,19 +25,20 @@ public class StampActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
 
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
-                float scale = (float) (1024/(float)bitmap.getWidth());
-                int image_w = (int) (bitmap.getWidth() * scale);
-                int image_h = (int) (bitmap.getHeight() * scale);
-                Bitmap resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true);
-                resize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
-
-                Intent intent = new Intent(StampActivity.this, StampSecondActivity.class);
-
-                startActivity(intent);
+//                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//                Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
+//                float scale = (float) (1024/(float)bitmap.getWidth());
+//                int image_w = (int) (bitmap.getWidth() * scale);
+//                int image_h = (int) (bitmap.getHeight() * scale);
+//                Bitmap resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true);
+//                resize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+//                byte[] byteArray = stream.toByteArray();
+//
+//                Intent intent = new Intent(StampActivity.this, StampSecondActivity.class);
+//
+//                startActivity(intent);
             }
         });
 
