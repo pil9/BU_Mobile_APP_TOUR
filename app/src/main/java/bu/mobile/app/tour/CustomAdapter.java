@@ -67,6 +67,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         holder.tv_address.setText(arrayList.get(position).getAddress());
         holder.chk1.setOnCheckedChangeListener(null);
         holder.chk1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
