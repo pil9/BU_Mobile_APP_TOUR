@@ -14,11 +14,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="10"
+            android:layout_weight="2"
             android:gravity="center"
+            android:text="🕵️‍♂"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/wandohope"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
             android:text="ID : 아무개 "
             android:textSize="40dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingLeft="50dp"
+            android:fontFamily="@font/wandohope"/>
 
 
     </LinearLayout>
@@ -27,35 +40,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="10"
             android:gravity="left"
-            android:text=" QR스캔 횟수 : 0"
+            android:text="📸 QR스캔 횟수 : 5"
             android:textSize="30dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/wandohope"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:gravity="left"
-            android:text=" 보유 쿠폰 수  : 0"
+            android:text="🎫 보유 쿠폰 수  : 5"
             android:textSize="30dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/wandohope"
+            />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:gravity="left"
-            android:text=" 방문 관관 수  : 0"
-            android:textSize="30dp"
-            android:textStyle="bold" />
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        >
 
     </LinearLayout>
 

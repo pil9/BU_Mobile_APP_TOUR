@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -14,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+
+import java.io.ByteArrayOutputStream;
 
 public class QRcodeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,6 +51,15 @@ public class QRcodeActivity extends AppCompatActivity implements View.OnClickLis
         integrator.initiateScan();
     }
 
+    public byte[] getByteArrayFromDrawable(Drawable d) {
+        Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] data = stream.toByteArray();
+
+        return data;
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
@@ -62,7 +76,7 @@ public class QRcodeActivity extends AppCompatActivity implements View.OnClickLis
                 }).setPositiveButton("쿠폰보기", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
-                        Intent intent = new Intent(QRcodeActivity.this,MypageActivity.class);
+                        Intent intent = new Intent(QRcodeActivity.this,StampActivity.class);
                         startActivity(intent);
                         finish();
 
