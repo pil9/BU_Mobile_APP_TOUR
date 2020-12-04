@@ -29,8 +29,8 @@ public class StampActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fruits.addFirst("테스트 스탬프");
-                price.addFirst("전품목 5% 할인");
+                fruits.addFirst("보탑사 스탬프");
+                price.addFirst("(12월5일까지) 기념품관 20% 할인 쿠폰");
                 iimg.addFirst("stamp1");
 
                 finish();

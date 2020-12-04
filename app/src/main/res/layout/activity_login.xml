@@ -6,9 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical">
+
     <bu.mobile.app.tour.SmoothBackgroundView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,13 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="10dp">
+            android:layout_weight="1"
+            >
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginTop="40sp"
+                android:layout_marginTop="100sp"
                 android:layout_gravity="center"
                 android:src="@drawable/cheon" />
             <LinearLayout
@@ -43,7 +49,7 @@
                     android:text="랜드마크 in"
                     android:fontFamily="@font/wandohope"
                     android:textColor="#000000"
-                    android:textSize="45sp"
+                    android:textSize="60sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -56,7 +62,7 @@
                     android:fontFamily="@font/wandohope"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="55sp"
+                    android:textSize="70sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -68,7 +74,7 @@
                     android:text="안"
 
                     android:textColor="#000000"
-                    android:textSize="50sp"
+                    android:textSize="65sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -77,14 +83,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
 
 
 
             <EditText
                 android:id="@+id/idText"
-                android:layout_width="250dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10sp"
@@ -99,7 +106,7 @@
 
             <EditText
                 android:id="@+id/editTextTextPassword"
-                android:layout_width="250dp"
+                android:layout_width="300dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -113,13 +120,14 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="220dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0"
                 android:background="@drawable/button"
                 android:layout_marginTop="10dp"
                 android:text="로그인"
+                android:fontFamily="@font/wandohope"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:textSize="24sp"
@@ -127,26 +135,42 @@
 
             <Button
                 android:id="@+id/reg_button"
-                android:layout_width="220dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:text="회원가입"
+                android:fontFamily="@font/wandohope"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:onClick="gojoin"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="모바일 프로그래밍 수업 5조의 작품"
-                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bulogo"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 모바일 프로그래밍 수업 5조의 작품"
+
+                android:textSize="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                android:fontFamily="@font/wandohope"
                 android:gravity="center_horizontal"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
