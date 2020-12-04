@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
@@ -46,7 +47,7 @@ public class MypageActivity extends Fragment {
     static LinkedList<String> fruits = new LinkedList();
     static LinkedList<String> price = new LinkedList();
 
-
+    private ArrayAdapter myAdapters;
 
     @Override
     public void  onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class MypageActivity extends Fragment {
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
 
         if(fruits.size() <= 0){
             fruits.add("각원사 스탬프");
@@ -76,6 +78,7 @@ public class MypageActivity extends Fragment {
         View v = inflater.inflate(R.layout.activity_mypage, container, false);
         listView = (ListView) v.findViewById(R.id.conlist);
         adapter = new myAdapters();
+        adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
 
         userName = (TextView) v.findViewById(R.id.username);
