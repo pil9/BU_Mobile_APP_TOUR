@@ -6,27 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <bu.mobile.app.tour.SmoothBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="앱 이름"
+        android:text="랜드마크 in 천안"
+        android:textColor="#000000"
+        android:fontFamily="@font/wandohope"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:textSize="30dp" />
+        android:layout_margin="50dp"
+        android:textSize="40sp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:src="@drawable/cheon"
         android:layout_centerHorizontal="true"
-        android:layout_margin="80dp" />
+        android:layout_margin="100dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/scanBtn"
         android:layout_centerInParent="true"
         android:text="QR코드를 인식해주세요!"
-        android:textSize="25sp"/>
+        android:textSize="24sp"
+        android:background="@drawable/button"
+        android:textColor="#FFFFFF" />
+
 
 </RelativeLayout>

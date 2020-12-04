@@ -41,9 +41,12 @@
         android:gravity="center"
         android:layout_weight="20"
         android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wandohope"
         />
 
     <Button
+        android:background="@drawable/round_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="우리 자랑 천안의 관광지 3개의 퀴즈를 맞추고 자신의 천안 인싸력을증명하세요! 준비됬으면 GO!GO!"
@@ -54,11 +57,13 @@
         android:layout_marginRight="15dp"
         android:textStyle="bold"
         android:gravity="center"
+        android:padding="20dp"
+        android:fontFamily="@font/wandohope"
         />
 
     <ImageView
         android:id="@+id/qzstart_btn"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="300dp"
         android:src="@drawable/button_start1"
         android:layout_weight="50"

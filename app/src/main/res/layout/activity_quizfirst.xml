@@ -40,6 +40,8 @@
             android:layout_marginTop="40dp"
             android:text="1. 해당 그림 관광지의 이름은?"
             android:textSize="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
             />
 
     </LinearLayout>
@@ -76,7 +78,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:onClick="btn1"/>
+            android:onClick="btn1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"/>
         <Button
             android:id="@+id/qbtn2"
             android:layout_width="match_parent"
@@ -86,7 +91,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:onClick="btn2"/>
+            android:onClick="btn2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"/>
         <Button
             android:id="@+id/qbtn3"
             android:layout_width="match_parent"
@@ -96,7 +104,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:onClick="btn3"/>
+            android:onClick="btn3"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wandohope"
+            android:background="@drawable/round_border"/>
 
     </LinearLayout>
 
