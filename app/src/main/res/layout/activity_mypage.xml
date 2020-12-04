@@ -51,26 +51,63 @@
 
             >
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="10"
+                android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="📸 QR스캔 횟수 : 5"
+                android:text="📸 QR스캔 횟수 : "
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/wandohope"/>
 
             <TextView
+                android:id="@+id/concount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="4"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:layout_weight="10"
+                android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="🎫 보유 쿠폰 수  : 5"
+                android:text="🎫 보유 쿠폰 수  : "
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/wandohope"
                 />
+            <TextView
+                android:id="@+id/concount2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="5"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"
+                />
+
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

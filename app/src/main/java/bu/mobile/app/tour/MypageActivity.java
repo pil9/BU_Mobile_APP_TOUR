@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -29,6 +30,7 @@ import android.util.Log;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 import static bu.mobile.app.tour.LoginActivity.useridx;
 
@@ -40,22 +42,30 @@ public class MypageActivity extends Fragment {
     TextView totalSam;
     TextView userName;
 
+    TextView concoco;
+    TextView concoco2;
     ListView listView;
     myAdapters adapter;
     //static String[] fruits = {"각원사 스탬프", "아라리오갤러리 스탬프","독립기념관 스탬프","유관순 사열지 스탬프", "보탑사 스탬프"};
     //static String[] price = {"가맹점 20% 할인", "티켓 10% 할인","500원 기프트콘","전통시장 5% 할인", "적립 +10%"};
     static LinkedList<String> fruits = new LinkedList();
     static LinkedList<String> price = new LinkedList();
+    static LinkedList<String> iimg = new LinkedList();
 
     private ArrayAdapter myAdapters;
+    private Activity activity;
 
     @Override
     public void  onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
     }
+
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        this.activity = activity;
+    }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -72,6 +82,12 @@ public class MypageActivity extends Fragment {
             price.add("500원 기프트콘");
             price.add("전통시장 5% 할인");
             price.add("적립 +10%");
+
+            iimg.add("stamp1");
+            iimg.add("stamp2");
+            iimg.add("stamp3");
+            iimg.add("stamp4");
+            iimg.add("stamp5");
         }
 
 
@@ -98,6 +114,11 @@ public class MypageActivity extends Fragment {
         //Toast.makeText(getApplicationContext(),"로그확인.one: "+strNames+" two:"+strNumbers+" tree: "+strNumbers2+"",Toast.LENGTH_LONG).show();
         cursor2.close();
         sqlDB2.close();
+        Log.d(TAG,"카운트"+fruits.size());
+        concoco = (TextView) v.findViewById(R.id.concount);
+        concoco.setText(Integer.toString(fruits.size()));
+        concoco2 = (TextView) v.findViewById(R.id.concount2);
+        concoco2.setText(Integer.toString(fruits.size()));
 
 
         return v;
@@ -124,12 +145,18 @@ public class MypageActivity extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            conView view = new conView(getActivity().getApplicationContext());
+            conView view = new conView(activity.getApplicationContext());
 
             //TextView view = new TextView(getApplicationContext());
             //view.setText(fruits[position]);
             view.setFruit(fruits.get(position));
             view.setPrice(price.get(position));
+            /*Random random = new Random();
+            int type = random.nextInt(5);
+            type++;
+            if(type ==)
+            */
+            view.setiimg(iimg.get(position));
             //view.setTextSize(50.0f);
             //view.setTextColor(Color.BLUE);
             return view;

@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static bu.mobile.app.tour.MypageActivity.fruits;
+import static bu.mobile.app.tour.MypageActivity.iimg;
 import static bu.mobile.app.tour.MypageActivity.price;
 
 public class JoinActivity extends AppCompatActivity {
@@ -54,6 +55,12 @@ public class JoinActivity extends AppCompatActivity {
         price.add("500원 기프트콘");
         price.add("전통시장 5% 할인");
         price.add("적립 +10%");
+
+        iimg.add("stamp1");
+        iimg.add("stamp2");
+        iimg.add("stamp3");
+        iimg.add("stamp4");
+        iimg.add("stamp5");
 
     }
 
