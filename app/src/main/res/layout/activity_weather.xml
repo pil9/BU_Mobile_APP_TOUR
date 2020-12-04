@@ -100,12 +100,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="오늘 놀러가기 좋은 베스트 넘버원 관광지!\n(비 안 올때 꼭 가야하는 곳)"
+            android:text="오늘 놀러가기 좋은 베스트 넘버원 관광지!"
             android:fontFamily="@font/wandohope"
             android:textSize="22dp"
             android:textColor="@color/black"
 
             android:gravity="center"/>
+        <TextView
+            android:id="@+id/sun_rain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(비 안 올때 꼭 가야하는 곳)"
+            android:fontFamily="@font/wandohope"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -147,11 +157,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="오늘 놀러가면 망하는 관광지는?\n(오늘은 휴관일!) "
+            android:text="오늘 놀러가면 망하는 관광지는?"
             android:fontFamily="@font/wandohope"
             android:textSize="22dp"
             android:textColor="@color/black"
-
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/rest_rain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(오늘은 휴관일!)"
+            android:fontFamily="@font/wandohope"
+            android:textSize="20dp"
+            android:textColor="@color/black"
             android:gravity="center"/>
         <LinearLayout
             android:layout_width="match_parent"

@@ -49,7 +49,7 @@
         android:background="@drawable/round_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="우리 자랑 천안의 관광지 3개의 퀴즈를 맞추고 자신의 천안 인싸력을증명하세요! 준비됬으면 GO!GO!"
+        android:text="우리 자랑 천안의 관광지 3개의 퀴즈를 맞추고 자신의 천안 인싸력을증명하세요! 준비됐으면 GO!GO!"
         android:textSize="25dp"
         android:layout_weight="30"
         android:layout_marginTop="30dp"

@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_weather"
         android:name="bu.mobile.app.tour.WeatherActivity"
-        android:label="Remote"
+        android:label="날씨와 추천관광지"
         tools:layout="@layout/activity_weather" />
 
     <fragment

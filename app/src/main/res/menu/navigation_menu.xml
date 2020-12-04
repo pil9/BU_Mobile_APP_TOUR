@@ -5,6 +5,7 @@
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
         android:title="@string/Home"
+        android:actionMenuTextColor="@color/black"
         />
 
     <item android:title="@string/App">

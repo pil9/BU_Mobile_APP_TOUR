@@ -52,7 +52,8 @@ public class WeatherActivity extends Fragment {
     TextView best_address;
     TextView worst_name;
     TextView worst_address;
-
+    TextView rest_rain;
+    TextView sun_rain;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +74,8 @@ public class WeatherActivity extends Fragment {
         best_address = (TextView)v.findViewById(R.id.tv_address);
         worst_name = (TextView)v.findViewById(R.id.tv_name2);
         worst_address = (TextView)v.findViewById(R.id.tv_address2);
+        rest_rain = (TextView)v.findViewById(R.id.rest_rain);
+        sun_rain = (TextView)v.findViewById(R.id.sun_rain);
         sendData();
         return v;
     }
@@ -150,15 +153,29 @@ public class WeatherActivity extends Fragment {
                 String Weather_id = jObject.getString("id");
                 Weather_icon = jObject.getString("icon");
 
+                //비올 때 테스트
+                Weather_id = "200";
+                Weather_icon = "09d";
+
                 weather_name = wDescEngToKor(Integer.parseInt(Weather_id));
-                if (Integer.parseInt(Weather_id) > 615){
+                if (Integer.parseInt(Weather_id) > 701){
                     best_img.setImageResource(R.drawable.best_1);
                     best_name.setText("광덕사");
+                    best_address.setText("충청남도 천안시 동남구 광덕면 광덕사길 30 (광덕면)");
                     worst_img.setImageResource(R.drawable.worst_1);
+                    worst_name.setText("천안향교");
+                    worst_address.setText("충청남도 천안시 동남구 향교1길 89 (유량동)");
                 }
                 else{
-                    best_img.setImageResource(R.drawable.best_2);
-                    worst_img.setImageResource(R.drawable.worst_2);
+                    sun_rain.setText("(비가 올 때 가기 좋은 곳!)");
+                    best_img.setImageResource(R.drawable.worst_2);
+                    best_name.setText("아라리오갤러리");
+                    best_address.setText("충청남도 천안시 동남구 만남로 43 (신부동) 신세계백화점 내");
+
+                    rest_rain.setText("(비가 와서 놀기 힘들어요!)");
+                    worst_img.setImageResource(R.drawable.best_2);
+                    worst_name.setText("소노벨 천안 오션파크");
+                    worst_address.setText("충청남도 천안시 동남구 성남면 종합휴양지로 200 (대명리조트)");
                 }
 
             }
