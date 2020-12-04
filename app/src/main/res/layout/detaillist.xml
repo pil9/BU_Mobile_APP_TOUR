@@ -3,20 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/round_border">
+    android:padding="20dp">
 
     <ImageButton
         android:id="@+id/exitBtn"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_gravity="right"
-        android:background="@android:color/transparent"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:onClick="onButtonClicked"
-        android:textSize="10sp" />
 
+        android:textSize="10sp" />
+    <!--android:src="@drawable/exit"-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

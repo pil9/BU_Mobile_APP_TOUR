@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">BU_Mobile_APP_TOUR</string>
     <string name="myAppName">오늘의 천안 날씨</string>
+    <string name="Home">홈</string>
+    <string name="App">랜드마크!</string>
+    <string name="Board">랜드마크 목록</string>
+    <string name="Weather">날씨와 추천관광지</string>
+    <string name="Quiz">관광지 퀴즈퀴즈</string>
+    <string name="QRcode">QR이벤트</string>
+    <string name="header_name">랜드마크 in 천안</string>
 </resources>

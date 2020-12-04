@@ -2,6 +2,10 @@ package bu.mobile.app.tour;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.nfc.Tag;
@@ -9,8 +13,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,7 +37,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class WeatherActivity extends AppCompatActivity {
+public class WeatherActivity extends Fragment {
 
     private static final String TAG = "pil9";
     private HttpConnection httpConn = HttpConnection.getInstance();
@@ -40,45 +46,36 @@ public class WeatherActivity extends AppCompatActivity {
     TextView temp_now;
     ImageView imageView;
     Bitmap bitmap;
+    ImageView best_img;
+    ImageView worst_img;
+    TextView best_name;
+    TextView best_address;
+    TextView worst_name;
+    TextView worst_address;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.myAppName);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        mTitle.setText("오늘의 천안 날씨");
-        location_now = (TextView) findViewById(R.id.location);
-        weather_now = (TextView) findViewById(R.id.weather);
-        temp_now = (TextView) findViewById(R.id.temp);
-        imageView = findViewById(R.id.weatherimg);
-        sendData(); // 웹 서버로 데이터 전송
 
-//        Button button = (Button) findViewById(R.id.weather1);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(getBaseContext(), "동동", Toast.LENGTH_SHORT).show();
-//                sendData();
-//
-//            }
-//        });
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:{
-                onBackPressed();
-//                finish();
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
+    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.activity_weather, container, false);
+        location_now = (TextView)v.findViewById(R.id.location);
+        weather_now = (TextView)v.findViewById(R.id.weather);
+        temp_now = (TextView)v.findViewById(R.id.temp);
+        imageView =(ImageView)v.findViewById(R.id.weatherimg);
+        best_img = (ImageView)v.findViewById(R.id.iv_image);
+        worst_img = (ImageView)v.findViewById(R.id.iv_image2);
+        best_name = (TextView)v.findViewById(R.id.tv_name);
+        best_address = (TextView)v.findViewById(R.id.tv_address);
+        worst_name = (TextView)v.findViewById(R.id.tv_name2);
+        worst_address = (TextView)v.findViewById(R.id.tv_address2);
+        sendData();
+        return v;
+    }
 
     public void getWeatherImg(String imgid) {
         new Thread() {
@@ -127,7 +124,8 @@ public class WeatherActivity extends AppCompatActivity {
         public void onResponse(Call call, Response response) throws IOException {
             final String body = response.body().string();
             Log.d(TAG, "서버에서 응답한 Body:" + body);
-            runOnUiThread(new Runnable() {
+//            jsonParser(body);
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     jsonParser(body);
@@ -153,6 +151,16 @@ public class WeatherActivity extends AppCompatActivity {
                 Weather_icon = jObject.getString("icon");
 
                 weather_name = wDescEngToKor(Integer.parseInt(Weather_id));
+                if (Integer.parseInt(Weather_id) > 615){
+                    best_img.setImageResource(R.drawable.best_1);
+                    best_name.setText("광덕사");
+                    worst_img.setImageResource(R.drawable.worst_1);
+                }
+                else{
+                    best_img.setImageResource(R.drawable.best_2);
+                    worst_img.setImageResource(R.drawable.worst_2);
+                }
+
             }
 
             String temp_main = jsonObject.getString("main");

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="bu.mobile.app.tour.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="bu.mobile.app.tour.WeatherActivity"
+        android:label="Remote"
+        tools:layout="@layout/activity_weather" />
+
+    <fragment
+        android:id="@+id/nav_board"
+        android:name="bu.mobile.app.tour.MypageActivity"
+        android:label="Addremote"
+        tools:layout="@layout/activity_mypage" />
+    <!--
+    <fragment
+        android:id="@+id/nav_explain"
+        android:name="com.example.smartfan.ExplainFragment"
+        android:label="Explain"
+        tools:layout="@layout/fragment_explain" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.smartfan.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    -->
+</navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/Home"
+        />
+
+    <item android:title="@string/App">
+        <menu>
+            <item
+                android:id="@+id/nav_board"
+                android:icon="@drawable/ic_board"
+                android:title="@string/Board"/>
+            <item
+                android:id="@+id/nav_weather"
+                android:icon="@drawable/ic_weather"
+                android:title="@string/Weather"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_explain"
+        android:icon="@drawable/ic_quiz"
+        android:title="@string/Quiz" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_qr"
+        android:title="@string/QRcode" />
+</menu>

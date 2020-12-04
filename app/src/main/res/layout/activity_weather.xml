@@ -7,19 +7,19 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity"
     >
-    <include
-        layout="@layout/toolbar"/>
-    <!--
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="오늘의 천안 날씨"
         android:fontFamily="@font/wandohope"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:textColor="@color/black"
         android:layout_margin="10dp"
         android:gravity="center"/>
-        -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,27 +82,119 @@
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:paddingLeft="5dp"
-                android:textSize="40sp"
+                android:textSize="37sp"
                 android:fontFamily="@font/wandohope"
                 android:textStyle="bold"
                 android:text="26°C" />
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include layout="@layout/list_item"/>
-        <!--
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
         <TextView
-            android:id="@+id/weather_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="여기에"/>
-            -->
+            android:text="오늘 놀러가기 좋은 베스트 넘버원 관광지!\n(비 안 올때 꼭 가야하는 곳)"
+            android:fontFamily="@font/wandohope"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_border">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="이름"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/font"/>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="위치" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오늘 놀러가면 망하는 관광지는?\n(오늘은 휴관일!) "
+            android:fontFamily="@font/wandohope"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_border">
+
+            <ImageView
+                android:id="@+id/iv_image2"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="이름"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/font"/>
+
+                <TextView
+                    android:id="@+id/tv_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="위치" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
