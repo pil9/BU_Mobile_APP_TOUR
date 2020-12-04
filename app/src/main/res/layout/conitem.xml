@@ -32,13 +32,15 @@
                 android:layout_margin="5dp"
                 android:id="@+id/c_name"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="위치"
                 android:layout_margin="5dp"
-                android:id="@+id/c_address"/>
+                android:id="@+id/c_address"
+                android:fontFamily="@font/wandohope"/>
         </LinearLayout>
     </LinearLayout>
 
