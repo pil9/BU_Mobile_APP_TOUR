@@ -6,7 +6,10 @@ public class TourList {private String image;
     private String address;
     private String txt;
 
-    public TourList(){}
+    public TourList(){
+
+    }
+
 
     public String getImage() {
         return image;

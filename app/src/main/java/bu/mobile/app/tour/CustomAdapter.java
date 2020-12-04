@@ -15,9 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 
@@ -61,6 +65,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                 .into(holder.iv_image);
         holder.tv_name.setText(arrayList.get(position).getName());
         holder.tv_address.setText(arrayList.get(position).getAddress());
+        holder.chk1.setOnCheckedChangeListener(null);
+        holder.chk1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    Toast.makeText(context,arrayList.get(position).getName()+" 즐겨찾기 등록!",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
 
@@ -82,6 +96,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder {
+        private CheckBox chk1;
         private ImageView iv_image;
         private ImageView iv_image2;
         private TextView tv_name;
@@ -95,6 +110,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             this.iv_image2 = itemView.findViewById(R.id.iv_image2);
             this.tv_name = itemView.findViewById(R.id.tv_name);
             this.tv_address = itemView.findViewById(R.id.tv_address);
+            this.chk1 = itemView.findViewById(R.id.chk1);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

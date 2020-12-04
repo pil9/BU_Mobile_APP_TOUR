@@ -12,6 +12,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
+        <CheckBox
+            android:id="@+id/chk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/select"
+            android:checked="false"
+            android:padding="5dp"
+            android:onClick="onClick"/>
+
         <ImageView
             android:id="@+id/iv_image"
             android:layout_width="160dp"
