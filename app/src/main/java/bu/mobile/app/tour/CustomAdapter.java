@@ -110,6 +110,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                     params.height = WindowManager.LayoutParams.WRAP_CONTENT;
                     dialog.getWindow().setAttributes((WindowManager.LayoutParams)params);
 
+
                     TextView tvname = (TextView)dialog.findViewById(R.id.tvname);
                     tvname.setText(arrayList.get(position).getName());
 
