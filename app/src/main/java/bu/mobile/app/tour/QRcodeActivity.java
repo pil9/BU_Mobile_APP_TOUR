@@ -67,20 +67,26 @@ public class QRcodeActivity extends AppCompatActivity implements View.OnClickLis
             if(result.getContents() != null){
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage(result.getContents());
-                builder.setTitle("결과 스캔 중");
+                builder.setTitle("쿠폰 당첨!");
                 builder.setPositiveButton("다시 스캔해주세요", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         scanCode();
                     }
-                }).setPositiveButton("쿠폰보기", new DialogInterface.OnClickListener() {
+                }).setPositiveButton("저장!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
+                        finish();
+
+                    }
+                });
+                builder.setNegativeButton("자세히보기", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which)
+                    {
                         Intent intent = new Intent(QRcodeActivity.this,StampActivity.class);
                         startActivity(intent);
                         finish();
-
-
                     }
                 });
                 AlertDialog dialog = builder.create();

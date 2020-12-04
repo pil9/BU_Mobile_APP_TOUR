@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
+import static bu.mobile.app.tour.MypageActivity.fruits;
+import static bu.mobile.app.tour.MypageActivity.price;
+
 public class StampActivity extends AppCompatActivity {
     ImageView imageView;
     Button button;
@@ -25,19 +28,23 @@ public class StampActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fruits.addFirst("테스트 스탬프");
+                price.addFirst("전품목 5% 할인");
 
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
-                float scale = (float) (1024/(float)bitmap.getWidth());
-                int image_w = (int) (bitmap.getWidth() * scale);
-                int image_h = (int) (bitmap.getHeight() * scale);
-                Bitmap resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true);
-                resize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
+                finish();
 
-                Intent intent = new Intent(StampActivity.this, StampSecondActivity.class);
-
-                startActivity(intent);
+//                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//                Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
+//                float scale = (float) (1024/(float)bitmap.getWidth());
+//                int image_w = (int) (bitmap.getWidth() * scale);
+//                int image_h = (int) (bitmap.getHeight() * scale);
+//                Bitmap resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true);
+//                resize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+//                byte[] byteArray = stream.toByteArray();
+//
+//                Intent intent = new Intent(StampActivity.this, StampSecondActivity.class);
+//
+//                startActivity(intent);
             }
         });
 
