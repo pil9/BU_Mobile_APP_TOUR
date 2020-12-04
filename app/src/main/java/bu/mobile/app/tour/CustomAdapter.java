@@ -103,7 +103,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                         listener.onItemClick(CustomViewHolder.this,v,position);
                     }
                     Dialog dialog = new Dialog(context);
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     dialog.setContentView(R.layout.detaillist);
 
                     TextView tvname = (TextView)dialog.findViewById(R.id.tvname);

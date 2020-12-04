@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/nav_board"
-        android:name="bu.mobile.app.tour.MypageActivity"
+        android:name="bu.mobile.app.tour.MainActivity"
         android:label="Addremote"
-        tools:layout="@layout/activity_mypage" />
+        tools:layout="@layout/activity_main"/>
     <!--
     <fragment
         android:id="@+id/nav_explain"

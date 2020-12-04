@@ -14,8 +14,8 @@
         android:gravity="center"
         android:onClick="onButtonClicked"
 
-        android:textSize="10sp" />
-    <!--android:src="@drawable/exit"-->
+        android:textSize="10sp"
+        android:src="@drawable/exit"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
