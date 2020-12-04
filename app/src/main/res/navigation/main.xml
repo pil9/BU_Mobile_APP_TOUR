@@ -6,10 +6,10 @@
     app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="bu.mobile.app.tour.HomeFragment"
+        android:id="@+id/nav_board"
+        android:name="bu.mobile.app.tour.MainActivity"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/activity_main" />
 
     <fragment
         android:id="@+id/nav_weather"
@@ -18,16 +18,18 @@
         tools:layout="@layout/activity_weather" />
 
     <fragment
-        android:id="@+id/nav_board"
+        android:id="@+id/nav_home"
         android:name="bu.mobile.app.tour.MypageActivity"
         android:label="Addremote"
         tools:layout="@layout/activity_mypage" />
-    <!--
+
     <fragment
-        android:id="@+id/nav_explain"
-        android:name="com.example.smartfan.ExplainFragment"
+        android:id="@+id/nav_quiz"
+        android:name="bu.mobile.app.tour.QuizmainActivity"
         android:label="Explain"
-        tools:layout="@layout/fragment_explain" />
+        tools:layout="@layout/activity_quizmain" />
+
+    <!--
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.smartfan.SettingsFragment"

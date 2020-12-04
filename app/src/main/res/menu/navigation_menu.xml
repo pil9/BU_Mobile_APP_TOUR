@@ -22,7 +22,7 @@
     </item>
 
     <item
-        android:id="@+id/nav_explain"
+        android:id="@+id/nav_quiz"
         android:icon="@drawable/ic_quiz"
         android:title="@string/Quiz" />
 

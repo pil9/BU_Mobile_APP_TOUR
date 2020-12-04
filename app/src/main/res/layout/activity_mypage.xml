@@ -2,72 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:text="🕵️‍♂"
-            android:textSize="40dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/wandohope"/>
-
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:gravity="center_vertical"
-            android:text="ID : 아무개 "
-            android:textSize="40dp"
-            android:textStyle="bold"
-            android:paddingLeft="50dp"
-            android:fontFamily="@font/wandohope"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-
-        >
-
-        <TextView
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/round_border">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:gravity="left"
-            android:text="📸 QR스캔 횟수 : 5"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/wandohope"/>
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="🕵️‍♂"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="아무개님의 마이페이지"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/wandohope"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:gravity="left"
-            android:text="🎫 보유 쿠폰 수  : 5"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/wandohope"
-            />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
 
+            >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:text="📸 QR스캔 횟수 : 5"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="🎫 보유 쿠폰 수  : 5"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/wandohope"
+                />
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
