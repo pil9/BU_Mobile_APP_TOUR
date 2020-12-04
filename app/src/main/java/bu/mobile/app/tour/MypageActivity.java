@@ -67,7 +67,7 @@ public class MypageActivity extends Fragment {
         cursor2.moveToFirst();
         String id;
         Log.d(TAG,"회원확인 : "+cursor2.getString(1));
-        Toast.makeText(getActivity(),"로그확인:"+cursor2.getString(1),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getActivity(),"로그확인:"+cursor2.getString(1),Toast.LENGTH_LONG).show();
         id = cursor2.getString(1);
         userName.setText(id+"님의 마이페이지");
         //Toast.makeText(getApplicationContext(),"로그확인.one: "+strNames+" two:"+strNumbers+" tree: "+strNumbers2+"",Toast.LENGTH_LONG).show();
