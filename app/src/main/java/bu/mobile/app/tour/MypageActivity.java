@@ -60,7 +60,7 @@ public class MypageActivity extends Fragment {
 
         myHelper=new bu.mobile.app.tour.LoginActivity.myDBHelper(getActivity());
 
-        useridx = 1;//로그인 페이지와 연동 후 확인 필요 임시값 입력함
+        //useridx = 1;//로그인 페이지와 연동 후 확인 필요 임시값 입력함
         sqlDB2=myHelper.getReadableDatabase();
         Cursor cursor2;
         cursor2=sqlDB2.rawQuery("SELECT * FROM member WHERE midx='"+useridx+"' ;",null);//select문 실행
