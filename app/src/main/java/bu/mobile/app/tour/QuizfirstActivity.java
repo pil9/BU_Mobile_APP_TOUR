@@ -59,7 +59,7 @@ public class QuizfirstActivity extends AppCompatActivity {
 
         }
 
-        Toast.makeText(getApplicationContext(),"중복확인"+check,Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"중복확인"+check,Toast.LENGTH_LONG).show();
         Log.d("배열확인: ", Arrays.toString(check));
         Qbtn1.setText("각원사");
         Qbtn2.setText("독립기념관");
@@ -73,7 +73,7 @@ public class QuizfirstActivity extends AppCompatActivity {
     public void btn1(View v){
         Button btn=(Button)findViewById(R.id.qbtn1);
         String usercheck=btn.getText().toString();
-        Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
         if(usercheck == result){
             //정답
             finalch++;
@@ -82,13 +82,13 @@ public class QuizfirstActivity extends AppCompatActivity {
 
         myIntent.putExtra("acount", finalch);
         myIntent.putExtra("mchch", check);
-        Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
         startActivity(myIntent);
     }
     public void btn2(View v){
         Button btn=(Button)findViewById(R.id.qbtn2);
         String usercheck=btn.getText().toString();
-        Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
         if(usercheck == result){
             //정답
             finalch++;
@@ -96,13 +96,13 @@ public class QuizfirstActivity extends AppCompatActivity {
         Intent myIntent = new Intent(this, QuizsecondActivity.class);
         myIntent.putExtra("acount", finalch);
         myIntent.putExtra("mchch", check);
-        Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
         startActivity(myIntent);
     }
     public void btn3(View v){
         Button btn=(Button)findViewById(R.id.qbtn3);
         String usercheck=btn.getText().toString();
-        Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"check"+usercheck,Toast.LENGTH_SHORT).show();
         if(usercheck == result){
             //정답
             finalch++;
@@ -110,7 +110,7 @@ public class QuizfirstActivity extends AppCompatActivity {
         Intent myIntent = new Intent(this, QuizsecondActivity.class);
         myIntent.putExtra("acount", finalch);
         myIntent.putExtra("mchch", check);
-        Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"gogo"+finalch,Toast.LENGTH_SHORT).show();
         startActivity(myIntent);
     }
 
