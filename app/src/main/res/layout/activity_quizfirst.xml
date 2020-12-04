@@ -20,9 +20,10 @@
             android:text="Quiz 1"
             android:textSize="45dp"
 
-            android:textColor="#00FF00"
+            android:textColor="#000000"
             android:textStyle="bold"
             android:gravity="center"
+            android:fontFamily="@font/wandohope"
             />
 
     </LinearLayout>

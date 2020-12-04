@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -42,4 +45,11 @@ public class QuizresultActivity extends AppCompatActivity {
         Log.d("답 갯: ", "value"+nowagree);
 
     }
+
+    public void gohome(View v){
+        Intent myIntent = new Intent(this, MypageActivity.class);
+        startActivity(myIntent);
+    }
+
+
 }

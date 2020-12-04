@@ -18,9 +18,10 @@
             android:text="Result"
             android:textSize="45dp"
 
-            android:textColor="#00FF00"
+            android:textColor="#000000"
             android:textStyle="bold"
             android:gravity="center"
+            android:fontFamily="@font/wandohope"
             />
 
     </LinearLayout>
@@ -95,7 +96,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
+        android:layout_weight="2"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -108,7 +109,8 @@
 
             android:fontFamily="@font/wandohope"
             android:background="@drawable/round_border"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:onClick="gohome"/>
 
     </LinearLayout>
 
