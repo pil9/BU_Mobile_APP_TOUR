@@ -137,9 +137,36 @@
                 android:padding="13dp"
                 android:hint=" 이름"
                 android:inputType="textPersonName" />
+            <LinearLayout
 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
 
-
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남성"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/wandohope"
+                android:textStyle="bold"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성"
+                android:textSize="20sp"
+                android:fontFamily="@font/wandohope"
+                android:textStyle="bold"
+                />
+                </RadioGroup>
+            </LinearLayout>
             <Button
                 android:id="@+id/reg_button"
                 android:layout_width="220dp"
@@ -149,6 +176,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:text="회원가입"
+                android:fontFamily="@font/wandohope"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
@@ -158,6 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="모바일 프로그래밍 수업 5조의 작품"
+                android:fontFamily="@font/wandohope"
                 android:layout_marginTop="50dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"

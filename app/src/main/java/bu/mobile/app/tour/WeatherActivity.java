@@ -159,8 +159,8 @@ public class WeatherActivity extends Fragment {
                 Weather_icon = jObject.getString("icon");
 
                 //비올 때 테스트
-                Weather_id = "200";
-                Weather_icon = "09d";
+                Weather_id = "801";
+                Weather_icon = "02d";
 
                 weather_name = wDescEngToKor(Integer.parseInt(Weather_id));
                 if (Integer.parseInt(Weather_id) > 701){
