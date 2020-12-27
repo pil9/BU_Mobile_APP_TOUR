@@ -57,7 +57,7 @@ public class QuizthirdActivity extends AppCompatActivity {
 
 
         }else if(type == 1){
-            result ="독립기념관";
+            result ="경복궁";
 
 
             Treeimg = (ImageView) findViewById(R.id.treeimg);
@@ -65,7 +65,7 @@ public class QuizthirdActivity extends AppCompatActivity {
 
 
         }else if(type == 2){
-            result ="아라리오갤러리";
+            result ="해운대";
 
 
             Treeimg = (ImageView) findViewById(R.id.treeimg);
@@ -79,9 +79,9 @@ public class QuizthirdActivity extends AppCompatActivity {
         if(qtype == 0){
             selectname ="각원사";
         }else if(qtype == 1){
-            selectname ="독립기념관";
+            selectname ="경복궁";
         }else if(qtype == 2){
-            selectname ="아라리오갤러리";
+            selectname ="해운대";
         }
         tourname.setText(selectname+" 이다.");
 

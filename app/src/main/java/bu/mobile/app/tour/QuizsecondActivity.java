@@ -60,16 +60,16 @@ public class QuizsecondActivity extends AppCompatActivity {
             textch.setText(resulttext);
 
         }else if(type == 1){
-            result ="독립기념관";
-            resulttext = "ㄷㄹㄱㄴㄱ";
+            result ="경복궁";
+            resulttext = "ㄱㅂㄱ";
 
             Twoimg = (ImageView) findViewById(R.id.twoimg);
             Twoimg.setImageResource(R.drawable.p2);
             textch.setText(resulttext);
 
         }else if(type == 2){
-            result ="아라리오갤러리";
-            resulttext = "ㅇㄹㄹㅇㄱㄹㄹ";
+            result ="해운대";
+            resulttext = "ㅎㅇㄷ";
 
             Twoimg = (ImageView) findViewById(R.id.twoimg);
             Twoimg.setImageResource(R.drawable.p3);

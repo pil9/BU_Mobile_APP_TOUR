@@ -46,13 +46,13 @@ public class QuizfirstActivity extends AppCompatActivity {
             Oneimg.setImageResource(R.drawable.p1);
 
         }else if(type == 1){
-            result ="독립기념관";
+            result ="경복궁";
 
             Oneimg = (ImageView) findViewById(R.id.oneimg);
             Oneimg.setImageResource(R.drawable.p2);
 
         }else if(type == 2){
-            result ="아라리오갤러리";
+            result ="해운대";
 
             Oneimg = (ImageView) findViewById(R.id.oneimg);
             Oneimg.setImageResource(R.drawable.p3);
@@ -62,8 +62,8 @@ public class QuizfirstActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(),"중복확인"+check,Toast.LENGTH_LONG).show();
         Log.d("배열확인: ", Arrays.toString(check));
         Qbtn1.setText("각원사");
-        Qbtn2.setText("독립기념관");
-        Qbtn3.setText("아라리오갤러리");
+        Qbtn2.setText("경복궁");
+        Qbtn3.setText("해운대");
 
 
 
