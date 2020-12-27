@@ -46,8 +46,8 @@ public class MypageActivity extends Fragment {
     TextView concoco2;
     ListView listView;
     myAdapters adapter;
-    //static String[] fruits = {"각원사 스탬프", "아라리오갤러리 스탬프","독립기념관 스탬프","유관순 사열지 스탬프", "보탑사 스탬프"};
-    //static String[] price = {"가맹점 20% 할인", "티켓 10% 할인","500원 기프트콘","전통시장 5% 할인", "적립 +10%"};
+    //static String[] fruits = {"각원사 스탬프", "아라리오갤러리 스탬프","독립기념관 스탬프","유관순 사열지 스탬프", "백석대 스탬프"};
+    //static String[] price = {"가맹점 20% 할인", "티켓 10% 할인","500원 기프트콘","전통시장 51% 할인", "적립 +10%"};
     static LinkedList<String> fruits = new LinkedList();
     static LinkedList<String> price = new LinkedList();
     static LinkedList<String> iimg = new LinkedList();
@@ -75,7 +75,7 @@ public class MypageActivity extends Fragment {
             fruits.add("아라리오갤러리 스탬프");
             fruits.add("독립기념관 스탬프");
             fruits.add("유관순 사열지 스탬프");
-            fruits.add("보탑사 스탬프");
+            fruits.add("백석대 스탬프");
 
             price.add("가맹점 20% 할인");
             price.add("티켓 10% 할인");
