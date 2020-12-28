@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "896057334844",
-    "firebase_url": "https://cheonan-5e571.firebaseio.com",
-    "project_id": "cheonan-5e571",
-    "storage_bucket": "cheonan-5e571.appspot.com"
+    "project_number": "726993952219",
+    "project_id": "butour-37d63",
+    "storage_bucket": "butour-37d63.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896057334844:android:06b6b1612b69d904b4b739",
+        "mobilesdk_app_id": "1:726993952219:android:ac20327e1b254a0d681bfe",
         "android_client_info": {
           "package_name": "bu.mobile.app.tour"
         }
       },
       "oauth_client": [
         {
-          "client_id": "896057334844-mrioaldeccpjn59b0c5v9easgng2pon9.apps.googleusercontent.com",
+          "client_id": "726993952219-kiikcno53dpevllnbehc476ahpehm1be.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBWPWBnHG0F11ssrBOgxH9KmdFd5P3STjc"
+          "current_key": "AIzaSyDXZEkk25bKh6smV_yp4EsfjAz5eNlR1hw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "896057334844-mrioaldeccpjn59b0c5v9easgng2pon9.apps.googleusercontent.com",
+              "client_id": "726993952219-kiikcno53dpevllnbehc476ahpehm1be.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
